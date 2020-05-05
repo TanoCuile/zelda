@@ -4,7 +4,7 @@ from .Abstract_Layer import Abstract_Layer
 
 class Sigmoid_Layer(Abstract_Layer):
     def __init__(self):
-        Abstract_Layer.__init__(self, is_trainable=True, layer_name='Sigmoid')
+        Abstract_Layer.__init__(self, layer_name='Sigmoid')
         self.input_tensor, self.output_tensor = None, None
         self.input_gradients, self.output_gradients = None, None
 
