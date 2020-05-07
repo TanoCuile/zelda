@@ -1,14 +1,12 @@
-from .BinaryCrossEntropy_Layer import BinaryCrossEntropy_Layer
-from .Linear_Layer import Linear_Layer
-from .ReLU_Layer import ReLU_Layer
-from .Sigmoid_Layer import Sigmoid_Layer
+from .types import BinaryCrossEntropy_Layer, Linear_Layer, ReLU_Layer, Sigmoid_Layer
 
 
 class Layers():
     def __init__(self):
-        self.Sigmoid = Sigmoid_Layer
-        self.ReLU = ReLU_Layer
-        self.Linear = Linear_Layer
-        self.BinaryCrossEntropy = BinaryCrossEntropy_Layer
+        self.Sigmoid = Sigmoid_Layer.Sigmoid_Layer
+        self.ReLU = ReLU_Layer.ReLU_Layer
+        self.Linear = Linear_Layer.Linear_Layer
+        self.BinaryCrossEntropy = BinaryCrossEntropy_Layer.BinaryCrossEntropy_Layer
+
 
 layers = Layers()

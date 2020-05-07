@@ -1,4 +1,4 @@
-from .SGD_Optimizer import SGD_Optimizer
+from .types import SGD_Optimizer
 
 class optimizers:
     def __init__(self):
@@ -9,4 +9,4 @@ class optimizers:
             self.lr = lr
 
         def __call__(self):
-            return SGD_Optimizer(self.lr)
+            return SGD_Optimizer.SGD_Optimizer(self.lr)
