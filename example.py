@@ -5,14 +5,14 @@ from keras.datasets import cifar10
 
 model = zelda.DebuggableModel()
 
-model.add(zelda.layers.Linear(784, 144))
+model.add(zelda.layers.Linear(input_dimension=784, output_dimension=144, initializer=zelda.initializers.xavier))
 model.add(zelda.layers.Sigmoid())
 
-model.add(zelda.layers.Linear(144, 10))
+model.add(zelda.layers.Linear(input_dimension=144, output_dimension=10, initializer=zelda.initializers.xavier))
 model.add(zelda.layers.Sigmoid())
 
 sgd = zelda.optimizers.SGD(lr=0.8)
-model.compile(zelda.layers.BinaryCrossEntropy(), sgd)
+model.compile(loss=zelda.layers.BinaryCrossEntropy(), optimizer=sgd)
 
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 
